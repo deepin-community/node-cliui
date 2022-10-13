@@ -1,0 +1,38 @@
+Source: node-cliui
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends:
+ debhelper-compat (= 13)
+ , nodejs
+ , chai
+ , mocha
+ , node-chalk
+ , node-string-width
+ , node-strip-ansi
+ , node-wrap-ansi
+ , rollup
+ , node-rollup-plugin-typescript
+ , dh-sequence-nodejs
+Standards-Version: 4.6.0
+Homepage: https://github.com/yargs/cliui#readme
+Vcs-Git: https://salsa.debian.org/js-team/node-cliui.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-cliui
+Rules-Requires-Root: no
+
+Package: node-cliui
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-string-width
+ , node-strip-ansi
+ , node-wrap-ansi
+Description: easily create complex multi-column CLIs
+ Exposes a simple layout Domain Specific Language (DSL), reminiscent
+ of HTML (with div and span elements) that makes it possible to easily
+ create command-line-interfaces (CLIs).
+ .
+ Node.js is an event-based server-side JavaScript engine.

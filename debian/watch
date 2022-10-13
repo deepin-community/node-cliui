@@ -1,0 +1,12 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-cliui-$1/ \
+ https://github.com/yargs/cliui/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+
+opts=\
+component=gts,\
+ctype=nodejs,\
+dversionmangle=auto,\
+filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-gts-$1/ \
+ https://github.com/google/gts/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
