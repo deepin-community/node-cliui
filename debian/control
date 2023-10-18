@@ -5,18 +5,18 @@ Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.deb
 Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
 Testsuite: autopkgtest-pkg-nodejs
 Build-Depends:
- debhelper-compat (= 13)
- , nodejs
- , chai
- , mocha
+ chai
+ , debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , mocha <!nocheck>
  , node-chalk
+ , node-rollup-plugin-typescript
  , node-string-width
  , node-strip-ansi
+ , node-typescript
  , node-wrap-ansi
  , rollup
- , node-rollup-plugin-typescript
- , dh-sequence-nodejs
-Standards-Version: 4.6.0
+Standards-Version: 4.6.1
 Homepage: https://github.com/yargs/cliui#readme
 Vcs-Git: https://salsa.debian.org/js-team/node-cliui.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-cliui
@@ -26,7 +26,6 @@ Package: node-cliui
 Architecture: all
 Depends:
  ${misc:Depends}
- , nodejs
  , node-string-width
  , node-strip-ansi
  , node-wrap-ansi

@@ -1,3 +1,18 @@
+node-cliui (7.0.4+repack+~cs3.1.0-4) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.1, no changes needed.
+  * Add build link to @rollup/plugin-typescript (Closes: #1022587)
+
+ -- Yadd <yadd@debian.org>  Tue, 25 Oct 2022 09:26:46 +0200
+
+node-cliui (7.0.4+repack+~cs3.1.0-3) unstable; urgency=medium
+
+  * Team upload
+  * Build missing files using tsc
+
+ -- Yadd <yadd@debian.org>  Mon, 21 Mar 2022 10:21:11 +0100
+
 node-cliui (7.0.4+repack+~cs3.1.0-2) unstable; urgency=medium
 
   * Team upload
