@@ -1,1 +1,2 @@
+@rollup/plugin-typescript
 @types/node
