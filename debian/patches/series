@@ -1,2 +1,3 @@
 somewhat-fix-wrap-ansi-regression-test.patch
 use-rollup-plugin-typescript.patch
+0003-Recompile-like-upstream.patch

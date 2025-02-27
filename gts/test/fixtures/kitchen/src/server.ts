@@ -1,1 +1,0 @@
-const isThisTypeScript = true

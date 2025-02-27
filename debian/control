@@ -8,6 +8,7 @@ Build-Depends:
  chai
  , debhelper-compat (= 13)
  , dh-sequence-nodejs
+ , dh-nodejs
  , mocha <!nocheck>
  , node-chalk
  , node-rollup-plugin-typescript
@@ -16,7 +17,7 @@ Build-Depends:
  , node-typescript
  , node-wrap-ansi
  , rollup
-Standards-Version: 4.6.1
+Standards-Version: 4.7.0
 Homepage: https://github.com/yargs/cliui#readme
 Vcs-Git: https://salsa.debian.org/js-team/node-cliui.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-cliui
@@ -29,9 +30,14 @@ Depends:
  , node-string-width
  , node-strip-ansi
  , node-wrap-ansi
+Breaks: node-tap (<< 16.3.7+ds2+~cs50.9.19-1~)
+Replaces: node-tap (<< 16.3.7+ds2+~cs50.9.19-1~)
+Provides: ${nodejs:Provides}
 Description: easily create complex multi-column CLIs
  Exposes a simple layout Domain Specific Language (DSL), reminiscent
  of HTML (with div and span elements) that makes it possible to easily
  create command-line-interfaces (CLIs).
+ .
+ This package include also jackspeak a very strict argument parser.
  .
  Node.js is an event-based server-side JavaScript engine.

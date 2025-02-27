@@ -1,8 +1,19 @@
-Description: move to @rollup/plugin-typescript
- move from @wessberg/rollup-plugin-ts to @rollup/plugin-typescript
-Author: Ayoyimika Ajibade <ayoyimikaajibade@gmail.com>
+From: Ayoyimika Ajibade <ayoyimikaajibade@gmail.com>
+Date: Sun, 18 Aug 2024 20:13:35 +0000
+Subject: move to @rollup/plugin-typescript
+
 Forwarded: not-needed
 Last-Update: 2021-11-04
+
+move from @wessberg/rollup-plugin-ts to @rollup/plugin-typescript
+---
+ package.json     | 2 +-
+ rollup.config.js | 5 +++--
+ tsconfig.json    | 8 +++-----
+ 3 files changed, 7 insertions(+), 8 deletions(-)
+
+diff --git a/package.json b/package.json
+index 3426665..3e2721e 100644
 --- a/package.json
 +++ b/package.json
 @@ -57,7 +57,7 @@
@@ -14,6 +25,8 @@ Last-Update: 2021-11-04
      "c8": "^7.3.0",
      "chai": "^4.2.0",
      "chalk": "^4.1.0",
+diff --git a/rollup.config.js b/rollup.config.js
+index ec8a2ac..19c70c6 100644
 --- a/rollup.config.js
 +++ b/rollup.config.js
 @@ -1,8 +1,9 @@
@@ -28,6 +41,8 @@ Last-Update: 2021-11-04
    exports: 'default'
  }
  
+diff --git a/tsconfig.json b/tsconfig.json
+index d5d8c21..ea27d3e 100644
 --- a/tsconfig.json
 +++ b/tsconfig.json
 @@ -4,14 +4,12 @@
