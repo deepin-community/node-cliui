@@ -1,12 +1,17 @@
 version=4
 opts=\
 dversionmangle=auto,\
-filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-cliui-$1/ \
- https://github.com/yargs/cliui/tags .*/archive/.*/v?([\d\.]+).tar.gz group
+uversionmangle=s/$/+repack+1/,\
+filenamemangle=s%.*/@ANY_VERSION@%@PACKAGE@-$1.tar.gz%,\
+searchmode=plain \
+    https://api.github.com/repos/yargs/cliui/tags?per_page=100 \
+    https://api.github.com/repos/yargs/cliui/tarball/refs/tags/v(7.0.4) group
 
 opts=\
-component=gts,\
+component=jackspeak,\
 ctype=nodejs,\
 dversionmangle=auto,\
-filenamemangle=s/.*?(\d[\d\.-]*@ARCHIVE_EXT@)/node-gts-$1/ \
- https://github.com/google/gts/tags .*/archive.*/v?([\d\.]+).tar.gz checksum
+filenamemangle=s%.*/@ANY_VERSION@%jackspeak-$1.tar.gz%,\
+searchmode=plain \
+    https://api.github.com/repos/isaacs/jackspeak/tags?per_page=100 \
+    https://api.github.com/repos/isaacs/jackspeak/tarball/refs/tags/v(1.4.2) checksum

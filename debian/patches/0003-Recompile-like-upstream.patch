@@ -1,0 +1,44 @@
+From: =?utf-8?q?Bastien_Roucari=C3=A8s?= <rouca@debian.org>
+Date: Sun, 18 Aug 2024 20:16:31 +0000
+Subject: Recompile like upstream
+
+Forwarded: not-needed
+---
+ tsconfig.json | 21 ++++++++++++++++-----
+ 1 file changed, 16 insertions(+), 5 deletions(-)
+
+diff --git a/tsconfig.json b/tsconfig.json
+index ea27d3e..0a94989 100644
+--- a/tsconfig.json
++++ b/tsconfig.json
+@@ -1,14 +1,25 @@
+ {
+-  "extends": "./node_modules/gts/tsconfig-google.json",
+   "compilerOptions": {
++    "allowUnreachableCode": false,
++    "allowUnusedLabels": false,
++    "declaration": true,
++    "forceConsistentCasingInFileNames": true,
++    "lib": ["es2022"],
++    "module": "es2022",
++    "moduleResolution": "node",
++    "noEmitOnError": true,
++    "noFallthroughCasesInSwitch": true,
++    "noImplicitReturns": true,
+     "outDir": "build",
+     "rootDir": ".",
++    "pretty": true,
+     "sourceMap": false,
+-    "lib": ["es2019"],
+-    "target": "es2017",
+-    "moduleResolution": "node",
+-    "module": "es2015"
++    "strict": true,
++    "target": "es2022"
+   },
++  "exclude": [
++    "node_modules"
++  ],
+   "include": [
+     "lib/**/*.ts"
+   ]
